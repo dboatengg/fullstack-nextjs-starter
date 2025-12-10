@@ -12,7 +12,7 @@ export default async function Header() {
           href="/"
           className="font-semibold text-gray-900 hover:text-gray-700"
         >
-          Feed
+          Posts
         </Link>
 
         {session && (
@@ -31,7 +31,7 @@ export default async function Header() {
             </p>
 
             <Link href="/create">
-              <button className="border border-gray-900 px-4 py-2 rounded-md hover:bg-gray-100 transition text-sm">
+              <button className="bg-green-600 hover:bg-green-400 text-white px-4 py-2 rounded-md transition text-sm">
                 New post
               </button>
             </Link>
@@ -44,7 +44,7 @@ export default async function Header() {
             >
               <button
                 type="submit"
-                className="border border-gray-900 px-4 py-2 rounded-md hover:bg-gray-100 transition text-sm"
+                className="border border-green-500 text-green-100 px-4 py-2 rounded-md transition text-sm"
               >
                 Log out
               </button>
@@ -59,7 +59,7 @@ export default async function Header() {
           >
             <button
               type="submit"
-              className="border border-gray-900 px-4 py-2 rounded-md hover:bg-gray-100 transition text-sm"
+              className="border border-green-500 text-green-100 px-4 py-2 rounded-md transition text-sm"
             >
               Log in
             </button>
