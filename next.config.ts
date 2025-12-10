@@ -1,10 +1,17 @@
+// import type { NextConfig } from "next";
+
+// const nextConfig: NextConfig = {
+//   serverExternalPackages: ["@prisma/client", "prisma"],
+
+//   /* config options here */
+// };
+
+// export default nextConfig;
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: ["@prisma/client", "prisma"],
-  },
-  /* config options here */
+  serverExternalPackages: ["@prisma/client", "prisma"],
 };
 
 export default nextConfig;

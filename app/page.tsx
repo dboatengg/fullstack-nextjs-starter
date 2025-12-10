@@ -2,6 +2,8 @@ import { prisma } from "@/lib/prisma";
 import { Prisma } from "@/app/generated/prisma/client";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 type PostWithAuthor = Prisma.PostGetPayload<{
   include: { author: true };
 }>;
