@@ -5,8 +5,8 @@ export default async function Header() {
   const session = await auth();
 
   return (
-    <nav className="flex items-center border-b border-gray-200 px-8 py-6">
-      {/* Left side */}
+    <nav className="flex flex-col md:flex-row items-center gap-4 border-b border-gray-200 px-6 py-4">
+      {/* Left navigation */}
       <div className="flex items-center gap-4">
         <Link
           href="/"
@@ -22,16 +22,16 @@ export default async function Header() {
         )}
       </div>
 
-      {/* Right side */}
-      <div className="ml-auto flex items-center gap-4">
+      {/* Right section */}
+      <div className="flex items-center gap-4 md:ml-auto">
         {session ? (
           <>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-600 text-center md:text-left">
               {session.user?.name} ({session.user?.email})
             </p>
 
             <Link href="/create">
-              <button className="border border-gray-900 px-4 py-2 rounded-md hover:bg-gray-100 transition">
+              <button className="border border-gray-900 px-4 py-2 rounded-md hover:bg-gray-100 transition text-sm">
                 New post
               </button>
             </Link>
@@ -44,7 +44,7 @@ export default async function Header() {
             >
               <button
                 type="submit"
-                className="border border-amber-300 px-4 py-2 rounded-md transition"
+                className="border border-gray-900 px-4 py-2 rounded-md hover:bg-gray-100 transition text-sm"
               >
                 Log out
               </button>
@@ -59,7 +59,7 @@ export default async function Header() {
           >
             <button
               type="submit"
-              className="border border-amber-300 px-4 py-2 rounded-md transition"
+              className="border border-gray-900 px-4 py-2 rounded-md hover:bg-gray-100 transition text-sm"
             >
               Log in
             </button>
