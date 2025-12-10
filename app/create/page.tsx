@@ -10,7 +10,7 @@ export default async function CreatePage() {
   }
 
   return (
-    <div className="bg-gray-50 p-12 flex justify-center items-center min-h-screen">
+    <div className="bg-gray-50 p-2 lg:p-12 flex justify-center items-center min-h-screen">
       <CreatePostForm />
     </div>
   );

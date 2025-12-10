@@ -9,14 +9,52 @@ A fullstack web application built with Next.js 16, Prisma 7, and PostgreSQL. Fea
 - **PostgreSQL** - Database (Vercel Postgres)
 - **TypeScript** - Full type safety
 - **React 19** - Server & Client Components
+- **NextAuth v5** – Authentication (GitHub OAuth)
 
 ## Features
 
-- ✅ Direct database queries in React Server Components
-- ✅ Dynamic routing for blog posts
-- ✅ Type-safe database operations with Prisma
-- ✅ Hot reload support in development
-- ✅ Production-ready Vercel deployment
+- Auth using NextAuth v5 (GitHub OAuth)
+- Server Actions (signIn, signOut, publish draft, create post)
+- Direct database queries inside Server Components
+- Drafts + publishing workflow
+- Dynamic routing for post detail pages
+- Fully type-safe Prisma operations
+- Responsive UI with Tailwind CSS
+- Ready for one-click Vercel deployment
+
+## Database Schema Overview
+
+A minimal blog structure:
+
+- **User**
+- **Account / Session / VerificationToken (NextAuth models)**
+- **Post** (draft or published)
+
+Relationships:
+
+- **One User → Many Posts**
+- Only authors can publish their drafts
+
+## Project Structure
+
+```lua
+app/
+├─ api/
+│ ├─ auth/[…nextauth]/route.ts → NextAuth handler
+│ ├─ post/route.ts → Create post (POST)
+│ ├─ publish/[id]/route.ts → Publish draft (PUT)
+├─ create/page.tsx → Create new post
+├─ drafts/page.tsx → User drafts
+├─ p/[id]/DeleteButton.tsx
+├─ p/[id]/PublishButton.tsx
+├─ posts/[id]/page.tsx → Post detail page
+components/
+├─ CreatePostForm.tsx
+├─ Header.tsx
+lib/
+├─ auth.ts
+├─ prisma.ts
+```
 
 ## Getting Started
 
