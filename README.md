@@ -22,7 +22,7 @@ A fullstack web application built with Next.js 16, Prisma 7, and PostgreSQL. Fea
 - Responsive UI with Tailwind CSS
 - Ready for one-click Vercel deployment
 
-## Database Schema Overview
+## Database Schema 
 
 A minimal blog structure:
 
@@ -37,7 +37,7 @@ Relationships:
 
 ## Project Structure
 
-```lua
+```
 app/
 ├─ api/
 │ ├─ auth/[…nextauth]/route.ts → NextAuth handler
@@ -83,7 +83,3 @@ lib/
 ```bash
    npm run dev
 ```
-
-## Database Schema
-
-Simple blog structure with Users and Posts in a one-to-many relationship.
