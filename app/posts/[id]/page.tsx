@@ -26,7 +26,7 @@ export default async function PostPage({
   }
 
   return (
-    <main>
+    <main className="p-8 max-w-3xl mx-auto">
       <Link href="/">← Back to posts</Link>
 
       <article>

@@ -15,7 +15,7 @@ export default async function Home() {
   });
 
   return (
-    <main>
+    <main className="p-8 max-w-3xl mx-auto">
       <h1>Posts</h1>
       <ul>
         {posts.map((post) => (
