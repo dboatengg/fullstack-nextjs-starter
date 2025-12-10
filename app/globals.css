@@ -16,5 +16,26 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-bold;
+  font-weight: bold;
+}
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 0.875rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+ul,
+li {
+  /* @apply list-disc list-inside; */
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-left: 5px;
+}
+button {
+  cursor: pointer;
 }
